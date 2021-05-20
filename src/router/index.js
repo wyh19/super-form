@@ -46,13 +46,31 @@ export const constantRoutes = [
   {
     path: '/',
     component: Layout,
-    redirect: '/dashboard',
-    children: [{
-      path: 'dashboard',
-      name: 'Dashboard',
-      component: () => import('@/views/dashboard/index'),
-      meta: { title: 'Dashboard', icon: 'dashboard' }
-    }]
+    redirect: '/super-form'
+  },
+
+  {
+    path: '/super-form',
+    component: Layout,
+    redirect: '/super-form/add',
+    meta: { title: '超级表单', icon: 'form' },
+    children: [
+      {
+        path: 'add',
+        component: () => import('@/views/super-form/add'),
+        meta: { title: '新增', icon: 'table' }
+      },
+      {
+        path: 'edit',
+        component: () => import('@/views/super-form/edit'),
+        meta: { title: '编辑', icon: 'tree' }
+      },
+      {
+        path: 'compare',
+        component: () => import('@/views/super-form/compare'),
+        meta: { title: '比对', icon: 'tree' }
+      }
+    ]
   },
 
   // 404 page must be placed at the end !!!
