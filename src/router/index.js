@@ -58,17 +58,17 @@ export const constantRoutes = [
       {
         path: 'add',
         component: () => import('@/views/super-form/add'),
-        meta: { title: '新增', icon: 'table' }
+        meta: { title: '新增', icon: 'el-icon-document' }
       },
       {
         path: 'edit',
         component: () => import('@/views/super-form/edit'),
-        meta: { title: '编辑', icon: 'tree' }
+        meta: { title: '编辑', icon: 'el-icon-edit-outline' }
       },
       {
         path: 'compare',
         component: () => import('@/views/super-form/compare'),
-        meta: { title: '比对', icon: 'tree' }
+        meta: { title: '比对', icon: 'el-icon-copy-document' }
       }
     ]
   },
