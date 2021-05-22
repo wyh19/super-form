@@ -8,15 +8,20 @@
     <el-button type="primary" @click="handleSave">保存</el-button>
     <form1 ref="form1" :data="formDataMap.form1" />
     <form2 ref="form2" :data="formDataMap.form2" />
+    <div class="anchor-wrapper">
+      <anchor />
+    </div>
   </div>
 </template>
 
 <script>
+import Anchor from '@/components/anchor'
 import Form1 from './form1'
 import Form2 from './form2'
 export default {
   name: 'TheForm',
   components: {
+    Anchor,
     Form1,
     Form2
   },
@@ -64,5 +69,13 @@ export default {
   ::v-deep input {
     width: 280px;
   }
+}
+.anchor-wrapper {
+  position: fixed;
+  right: 0px;
+  width: 220px;
+  height: 300px;
+  top: 50%;
+  transform: translate(0, -50%);
 }
 </style>
