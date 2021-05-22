@@ -1,3 +1,4 @@
+import { easyClone } from '@/utils';
 <!--
  * @Description:
  * @Author: wyh19
@@ -15,23 +16,17 @@
 </template>
 
 <script>
+import SuperFormMixin from '@/mixins/super-form-mixin'
 export default {
   name: 'Form1',
+  mixins: [SuperFormMixin],
   data() {
     return {
-      formData: {},
       rules: {
         name: [
           { required: true, message: '请输入姓名', trigger: 'blur' }
         ]
       }
-    }
-  },
-  methods: {
-    validForm() {
-      let result = false
-      this.$refs['form'].validate((valid) => { result = valid })
-      return result
     }
   }
 }

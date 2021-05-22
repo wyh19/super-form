@@ -12,23 +12,17 @@
 </template>
 
 <script>
+import SuperFormMixin from '@/mixins/super-form-mixin'
 export default {
   name: 'Form2',
+  mixins: [SuperFormMixin],
   data() {
     return {
-      formData: {},
       rules: {
         company: [
           { required: true, message: '请输入公司', trigger: 'blur' }
         ]
       }
-    }
-  },
-  methods: {
-    validForm() {
-      let result = false
-      this.$refs['form'].validate((valid) => { result = valid })
-      return result
     }
   }
 }
