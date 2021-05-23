@@ -10,7 +10,7 @@
     <div data-section="个人信息"></div>
     <form1 ref="form1" :data="formDataMap.form1" />
     <div data-section="其他信息"></div>
-    <div style="width:300px;height:200px;background:#ccc;">占位符</div>
+    <div style="width:300px;height:100px;background:#ccc;">占位符</div>
     <div data-section="高级信息" data-ismain></div>
     <div data-section="公司信息"></div>
     <form2 ref="form2" :data="formDataMap.form2" />
@@ -73,7 +73,7 @@ export default {
 .form-wrapper {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 280px;
   padding: 16px;
   overflow-y: auto;
   ::v-deep input {
@@ -85,7 +85,7 @@ export default {
   right: 0px;
   width: 220px;
   height: 300px;
-  top: 50%;
+  top: 30%;
   transform: translate(0, -50%);
 }
 div[data-section] {
